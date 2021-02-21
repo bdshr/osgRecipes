@@ -61,15 +61,21 @@ static const char* finalVertSource = {
 };
 
 static const char* finalFragSource = {
-    "uniform "SL_SAMPLER" colorTex;\n"
-    "uniform "SL_SAMPLER" normalTex;\n"
-    "uniform "SL_SAMPLER" viewTex;\n"
+    "uniform "\
+    SL_SAMPLER" colorTex;\n"
+    "uniform "\
+    SL_SAMPLER" normalTex;\n"
+    "uniform "\
+    SL_SAMPLER" viewTex;\n"
     "void main(void)\n"
     "{\n"
     "   vec2 uv = gl_TexCoord[0].xy;\n"
-    "   vec3 color = "SL_TEXTURE"(colorTex, uv).xyz;\n"
-    "   vec3 normal = "SL_TEXTURE"(normalTex, uv).xyz;\n"
-    "   vec3 viewDir = "SL_TEXTURE"(viewTex, uv).xyz;\n"
+    "   vec3 color = "\
+    SL_TEXTURE"(colorTex, uv).xyz;\n"
+    "   vec3 normal = "\
+    SL_TEXTURE"(normalTex, uv).xyz;\n"
+    "   vec3 viewDir = "\
+    SL_TEXTURE"(viewTex, uv).xyz;\n"
     "   vec3 lightDir = vec3(0.7, -0.7, -0.7);\n"
     "   lightDir = normalize(-lightDir);\n"
     

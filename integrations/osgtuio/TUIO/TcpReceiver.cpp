@@ -30,7 +30,7 @@ int tcp_connect(int socket, const struct sockaddr *address, socklen_t address_le
 }
 
 #ifdef WIN32
-typedef	DWORD int32_t;
+//typedef	DWORD int32_t;
 #endif
 
 #ifndef  WIN32

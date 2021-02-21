@@ -11,7 +11,7 @@
 
 struct CollectFaceOperator
 {
-    void operator()( const osg::Vec3& v1, const osg::Vec3& v2, const osg::Vec3& v3, bool temp )
+    void operator()( const osg::Vec3& v1, const osg::Vec3& v2, const osg::Vec3& v3/*, bool temp*/ )
     {
         if ( v1==v2 || v2==v3 || v3==v1 ) return;
         indices.push_back( findIndex(v1) );

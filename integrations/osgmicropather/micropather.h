@@ -49,7 +49,7 @@ distribution.
 
 
 #if defined( _DEBUG )
-#	if defined( _MSC_VER )
+#	if 0 //defined( XXX_MSC_VER )
 #		define MPASSERT( x )		if ( !(x)) { _asm { int 3 } }
 #	else
 #		include <assert.h>

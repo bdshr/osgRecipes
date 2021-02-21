@@ -24,7 +24,7 @@
 
 #ifdef  WIN32
 #ifndef int32_t
-typedef DWORD int32_t;
+//typedef DWORD int32_t;
 #endif
 #endif
 

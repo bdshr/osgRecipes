@@ -32,7 +32,7 @@ int main( int argc, char** argv )
     osg::ref_ptr<osg::Geometry> geometry = new osg::Geometry;
     geometry->setVertexArray( dt->getInputPointArray() );
     geometry->setNormalArray( dt->getOutputNormalArray() );
-    geometry->setNormalBinding( osg::Geometry::BIND_PER_PRIMITIVE );
+    geometry->setNormalBinding( osg::Geometry::BIND_PER_PRIMITIVE_SET );
     geometry->addPrimitiveSet( dt->getTriangles() );
     
     osg::ref_ptr<osg::Geode> geode = new osg::Geode;

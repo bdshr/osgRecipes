@@ -67,7 +67,7 @@ osgUtil::Intersector* PointIntersector::clone( osgUtil::IntersectionVisitor& iv 
 
 void PointIntersector::intersect( osgUtil::IntersectionVisitor& iv, osg::Drawable* drawable )
 {
-    osg::BoundingBox bb = drawable->getBound();
+    osg::BoundingBox bb = drawable->getBoundingBox();
     bb.xMin() -= _pickBias; bb.xMax() += _pickBias;
     bb.yMin() -= _pickBias; bb.yMax() += _pickBias;
     bb.zMin() -= _pickBias; bb.zMax() += _pickBias;

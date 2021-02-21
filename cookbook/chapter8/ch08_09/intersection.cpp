@@ -56,7 +56,7 @@ public:
 
 struct PagedReaderCallback : public osgUtil::IntersectionVisitor::ReadCallback
 {
-    virtual osg::Node* readNodeFile( const std::string& filename )
+	virtual osg::ref_ptr<osg::Node> readNodeFile(const std::string& filename) 
     { return osgDB::readNodeFile(filename); }
 };
 
